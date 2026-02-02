@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import SiteSettings
+from .models import CompanyInfo
 
 def index_view(request):
-    settings = SiteSettings.objects.first()
+    settings = CompanyInfo.objects.first()
     context = {'settings': settings}
     return render(request, 'index.html', context)
 
